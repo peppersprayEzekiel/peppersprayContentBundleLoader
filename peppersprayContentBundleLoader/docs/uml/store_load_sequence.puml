@@ -1,0 +1,10 @@
+﻿@startuml
+Game -> GameItemStorePatch: Start
+GameItemStorePatch -> ContentServer: ListItems(type)
+loop for each individual item
+    ContentServer --> GameItemStorePatch
+    GameItemStorePatch --> GameItemStorePatch: add item to the store
+end
+GameItemStorePatch --> Game
+
+@enduml

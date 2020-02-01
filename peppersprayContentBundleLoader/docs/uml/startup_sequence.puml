@@ -1,0 +1,12 @@
+﻿@startuml
+
+LoaderPlugin -> ContentServer: LoadBundleIndexes()
+loop for each index file
+ContentServer -> FS: ReadFile()
+FS --> ContentServer
+ContentServer -> ContentServer: parse ContentBundleIndex instances,\nfill mountpoint mappings
+end
+ContentServer --> LoaderPlugin
+
+@enduml
+

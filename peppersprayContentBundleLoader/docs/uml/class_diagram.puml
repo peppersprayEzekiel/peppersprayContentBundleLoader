@@ -1,0 +1,26 @@
+@startuml
+
+class ContentServer {
+    {method} HasItemAt
+    {method} RequestItem<T>
+    {method} ListItems<T>: IEnumerable<T>
+}
+
+class ContentItem {
+    {field} Path
+    {field} Identifier
+}
+
+class ContentBundleIndex {
+
+}
+
+ContentServer --* ContentBundleIndex: many
+ContentBundleIndex --* ContentItem: many
+
+EquipItem -up-|> ContentItem
+ClothingItem -up-|> EquipItem
+HairItem -up-|> EquipItem
+SpriteItem -up-|> ContentItem
+
+@enduml

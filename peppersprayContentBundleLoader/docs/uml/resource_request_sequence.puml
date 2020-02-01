@@ -1,0 +1,20 @@
+﻿@startuml
+
+Game -> ResourcesPatch: LoadAsync(path)
+ResourcesPatch -> ContentServer: HasItemAt(path)
+ContentServer --> ResourcesPatch
+alt item is mounted by ContentServer
+    ResourcesPatch -> ContentServer: RequestItem(path)
+    ContentServer -> ContentServer: find mounted ContentItem\nin mapping cache
+    ContentServer -> ContentItem: Load()
+    ContentItem -> ContentBundleIndex: Bundle.LoadAsset(assetName)
+    ContentBundleIndex --> ContentItem
+    ContentItem -> ContentItem: fix asset so it would\nconform to the game requirements
+    
+    ContentItem --> ContentServer
+else item is not mounted
+    ResourcesPatch -> ResourcesPatch: fall back to Unity\nimplementation
+end
+ResourcesPatch --> Game
+
+@enduml
