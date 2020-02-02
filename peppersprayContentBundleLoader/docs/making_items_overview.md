@@ -4,10 +4,6 @@
 You compile/make the required files, place them at the correct folder and 
 upon next relaunch they will appear in the game.
 
-## Example project
-Download [Unity project](https://drive.google.com/file/d/14ugQMBX_GjGL2mboTD67tCPRBoN59F3u/view?usp=sharing)
-which compiles content bundle with various clothing examples from the game.
-
 ## File structure
 Each *Content bundle* consist of:
 * Unity's `Asset Bundle` (which itself consists of two files, `NAME` and `NAME.manifest`)
@@ -51,3 +47,7 @@ tweaking to troubleshoot it.
 
 [Plugin Configuration](https://github.com/peppersprayEzekiel/peppersprayContentBundleLoader/blob/master/peppersprayContentBundleLoader/docs/plugin_configuration.md) 
 covers how to enable debug output and other plugin options. 
+
+## Example project
+Download [Unity project](https://drive.google.com/file/d/14ugQMBX_GjGL2mboTD67tCPRBoN59F3u/view?usp=sharing)
+which compiles content bundle with various clothing examples from the game.
