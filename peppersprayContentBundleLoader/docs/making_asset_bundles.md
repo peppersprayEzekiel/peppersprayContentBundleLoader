@@ -50,8 +50,8 @@ at the very minimum, have two - item prefab itself and its icon for the editor).
 which individual asset goes where.
 
 ## 5. Compile asset bundles
-After everything has been done compile the bundles using `Assets -> Build Asset Bundles`. Verify that bundle files 
-(`NAME` and `NAME1.manifest`) are in the target directory.
+After everything has been done compile the bundles using `Assets -> Build Asset Bundles`. Verify that bundle file 
+(`NAME`) is in the target directory. Other files (`.manifest` and `peppersprayContentBundles.*`) don't matter and can be omitted.
 
 Upon recompilation if progress bar appears only for a fraction of a second that usually means that Unity didn't detect 
 changes in the included assets. Verify that you did apply your changes to the prefab.
