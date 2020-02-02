@@ -6,7 +6,7 @@ upon next relaunch they will appear in the game.
 
 ## File structure
 Each *Content bundle* consist of:
-* Unity's `Asset Bundle` (which itself consists of two files, `NAME` and `NAME.manifest`)
+* Unity's `Asset Bundle`
 * Index file named `NAME.index.xml`
 
 Bundle files are located at `.peppersprayContentBundles\`.
