@@ -55,3 +55,16 @@ After everything has been done compile the bundles using `Assets -> Build Asset 
 
 Upon recompilation if progress bar appears only for a fraction of a second that usually means that Unity didn't detect 
 changes in the included assets. Verify that you did apply your changes to the prefab.
+
+## Troubleshooting
+> Items are not displayed in game or displayed "just hanging" near the character.
+
+Bones are not compatible with the game. Either their names are wrong or there's a wrong set of them (man's model on woman, for example).
+
+> Mesh disappears when zooming in too close, or when rotating the camera.
+
+*Bounds* are not set in their required value of `0;0;0 1;1;1` (see **Clothing item requirements**).
+
+> Mesh disappear when zooming out.
+
+Either *Bounds* are wrong or item doesn't have required LOD renderers (there should be a total of three at the top of hierarchy; see **Clothing item requirements**.
